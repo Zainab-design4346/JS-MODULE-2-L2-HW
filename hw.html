@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+
+</head>
+<body>
+  
+    <p id="result1"></p>
+<script>
+
+class Person {
+    constructor(n) {
+        this.name=n;
+    }
+    static hello() {
+        return "Hello" ;
+    }
+}
+
+class Info extends Person {
+    constructor(name,city) {
+        super(name);
+        this.city=city;
+    }
+    show() {
+        return Person.hello() + this.name + '.She is from '+ this.city;
+    }
+}
+
+let obj = new Info("Zainab","UAE");
+document.getElementById("result1").innerHTML= obj.show();
+
+</script>
+
+
+</body>
+</html>
